@@ -36,7 +36,7 @@
                     </div>
                     <div class="col">
                         <label for="cvv">CVV</label>
-                        <input onkeyup="alterarCvv()" type="text" id="cvv" class="form-control mb-3">
+                        <input onkeyup="alterarCvv()" type="text" id="cvv" class="cvv-input" class="form-control mb-3">
                     </div>
                 </div>
                 <button class="btn btn-success w-100">Enviar</button>
@@ -49,17 +49,18 @@
                         <img src="img/chip.png" alt="">
                         <img src="img/cartao.png" alt="">
                     </div>   
-                    <div class="card-numero-box">################</div>
+                    <div id="card_numero" class="card-numero-box">################</div>
                     <div class="flexbox">
                         <div class="box">
                             <span>Nome do Titular</span>
-                            <div class="card-titular-nome">Nome Completo</div>
+                            <div id="car_titular" class="card-titular-nome">Nome Completo</div>
                         </div> 
                         <div class="box">
                             <span>Validade</span>
                             <div class="expiracao">
-                                <span class="exp-mes">Mês</span>
-                                <span class="exp-ano">Ano</span>
+                                <span id="card_mes">Mês</span> 
+                                /
+                                <span id="card_ano">Ano</span>
                             </div>
                         </div> 
                     </div>              
@@ -67,7 +68,7 @@
                 <div class="verso">
                     <div class="stripe"></div>
                     <div class="box">
-                        <span>CVV</span>
+                        <span id="card_cvv">CVV</span>
                         <div class="cvv-box"></div>
                         <img src="img/cartao.png" alt="">
                     </div>

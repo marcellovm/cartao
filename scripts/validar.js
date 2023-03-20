@@ -1,5 +1,6 @@
 function validarEnvio() {
     if (numero.value === '') {
+
         event.preventDefault(); //evitar o envio do formulario
        
         numero.classList.add('is-invalid');
@@ -31,12 +32,14 @@ function alterarNumero() {
     if (numero.value.length === 19) {
         numero.classList.add('is-valid');
     }
+    card_numero.innerHTML = numero.value;
 }
 function alterarTitular () {
     titular.classList.remove('is-invalid');
-    if (titular.value.length === 35) {
+    if (titular.value.length === 30) {
         titular.classList.add('is-valid');
     }
+    car_titular.innerHTML = titular.value;
 }
 function alterarCpf() {
     cpf.classList.remove('is-invalid');
@@ -51,5 +54,23 @@ function alterarCpf() {
     }
 }
 function alterarMes() {
-    mes.classList.remove('is-invalid');
+    mes.classList.remove('is-invalid');    
+    card_mes.innerHTML = mes.value;
+}
+function alterarAno() {
+    ano.classList.remove('is-invalid');
+    card_ano.innerHTML = ano.value;
+}
+function alterarCvv() {
+    cvv.classList.remove('is-invalid');
+    let ultimoDigito = cvv.value.substr(-1);
+    if (isNaN(ultimoDigito)) {
+        let quantidade = cvv.value.length;
+        let resultado = cvv.value.substr(0, quantidade - 1);
+        cvv.value = resultado;
+    }
+    if (cvv.value.length === 3) {
+        cvv.classList.add('is-valid');
+    }
+    card_cvv.innerHTML = cvv.value;
 }
