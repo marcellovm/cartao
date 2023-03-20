@@ -9,7 +9,7 @@
     height: 100%;
     width: 100%;
     top: 0; left: 0;
-    background: linear-gradient(45, blueviolet, deeppink);
+    background: linear-gradient(45deg, blueviolet, deeppink);
     border-radius: 5px;
     backface-visibility: hidden;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
@@ -26,7 +26,7 @@
 .card-container .frente .image img {
     height: 50px;
 }
-.card-container .frente .card-number-box {
+.card-container .frente .card-numero-box {
     padding: 30px 0;
     font-size: 22px;
     color: #fff;
@@ -40,4 +40,44 @@
 .card-container .frente .flexbox .box {
     font-size: 15px;
     color: #fff;
+}
+.card-container .verso {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet, deeppink);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+
+.card-container .verso .stripe {
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+.card-container .verso .box {
+    padding: 0 20px;
+}
+.card-container .verso .box span {
+    color: #fff;
+    font-size: 15px;
+}
+.card-container .verso .box .cvv-box {
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+.card-container .verso .box img {
+    margin-top: 30px;
+    height: 30px;
 }

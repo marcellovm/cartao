@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagamento</title>
-    <link rel="stylesheet" href="/cartao/css/custom.css">
+    <link rel="stylesheet" href="/css/custom.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body class="container">
@@ -14,27 +14,29 @@
 
     <section class="row">
         <div class="col">
-            <form action="">
+            <form action="" onsubmit="validarEnvio()">
                 <label for="numero">Numero</label>
-                <input type="text" id="numero" class="form-control mb-3" placeholder="Ex: 0000 1111 2222 3333">
+                <input onkeyup="alterarNumero()" type="text" id="numero" class="form-control mb-3" placeholder="Ex: 0000 1111 2222 3333">
                 <label for="titular">Titular</label>
-                <input type="text" id="titular" class="form-control mb-3" placeholder="Ex: Marcello Victor Marinho">
+                <input onkeyup="alterarTitular()" type="text" id="titular" class="form-control mb-3" placeholder="Ex: Marcello Victor Marinho">
+                <label for="cpf">CPF</label>
+                <input onkeyup="alterarCpf()" type="text" id="cpf" class="form-control mb-3" placeholder="Ex: 000 111 222-55">
                 <div class="row">
                     <div class="col">
                         <label for="mes">Mês</label>
-                        <select id="mes" class="form-select">
+                        <select onchange="alterarMes()" id="mes" class="form-select">
                             <option value="" selected>--Selecione--</option>
                         </select>
                     </div>
                     <div class="col">
                         <label for="ano">Ano</label>
-                        <select id="ano" class="form-select">
+                        <select onchange="alterarAno()" id="ano"  class="form-select">
                             <option value="" selected>--Selecione--</option>
                         </select>
                     </div>
                     <div class="col">
                         <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" class="form-control mb-3">
+                        <input onkeyup="alterarCvv()" type="text" id="cvv" class="form-control mb-3">
                     </div>
                 </div>
                 <button class="btn btn-success w-100">Enviar</button>
@@ -47,7 +49,7 @@
                         <img src="img/chip.png" alt="">
                         <img src="img/cartao.png" alt="">
                     </div>   
-                    <div class="card-number-box">################</div>
+                    <div class="card-numero-box">################</div>
                     <div class="flexbox">
                         <div class="box">
                             <span>Nome do Titular</span>
@@ -73,7 +75,7 @@
             </div>
         </div>
     </section>
-    <script src="/cartao/scripts/eventos.js"></script>
-    <script src="/cartao/scripts/validar.js"></script>
+    <script src="/scripts/eventos.js"></script>
+    <script src="/scripts/validar.js"></script>
 </body>
 </html>
