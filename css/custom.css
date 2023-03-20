@@ -1,0 +1,43 @@
+.card-container {
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+.card-container .frente {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background: linear-gradient(45, blueviolet, deeppink);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    padding: 20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-out;
+}
+.card-container .frente .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.card-container .frente .image img {
+    height: 50px;
+}
+.card-container .frente .card-number-box {
+    padding: 30px 0;
+    font-size: 22px;
+    color: #fff;
+}
+.card-container .frente .flexbox {
+    display: flex;    
+}
+.card-container .frente .flexbox .box:nth-child(1) {
+    margin-right: auto;
+}
+.card-container .frente .flexbox .box {
+    font-size: 15px;
+    color: #fff;
+}
