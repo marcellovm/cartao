@@ -39,7 +39,7 @@ function alterarTitular () {
     if (titular.value.length === 30) {
         titular.classList.add('is-valid');
     }
-    car_titular.innerHTML = titular.value;
+    card_titular.innerHTML = titular.value;
 }
 function alterarCpf() {
     cpf.classList.remove('is-invalid');
