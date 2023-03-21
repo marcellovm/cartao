@@ -32,8 +32,13 @@
     height: 50px;
 }
 .card-container .frente .card-numero-box {
-    padding: 30px 0;
+    padding: 15px 0;
     font-size: 22px;
+    color: #fff;
+}
+.card-container .frente .card-cpf-box {
+    padding: 10px 0;
+    font-size: 20px;
     color: #fff;
 }
 .card-container .frente .flexbox {

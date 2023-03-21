@@ -52,6 +52,7 @@ function alterarCpf() {
     if (cpf.value.length === 14) {
         cpf.classList.add('is-valid');
     }
+    card_cpf.innerHTML = cpf.value;
 }
 function alterarMes() {
     mes.classList.remove('is-invalid');    
