@@ -29,6 +29,12 @@ function validarEnvio() {
 
 function alterarNumero() {
     numero.classList.remove('is-invalid');
+    let ultimoDigito = numero.value.substr(-1);
+    if (isNaN(ultimoDigito)) {
+        let quantidade = numero.value.length;
+        let resultado = numero.value.substr(0, quantidade -1);
+        numero.value = resultado;
+    }
     if (numero.value.length === 19) {
         numero.classList.add('is-valid');
     }
