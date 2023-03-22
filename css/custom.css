@@ -36,11 +36,7 @@
     font-size: 22px;
     color: #fff;
 }
-.card-container .frente .card-cpf-box {
-    padding: 10px 0;
-    font-size: 20px;
-    color: #fff;
-}
+
 .card-container .frente .flexbox {
     display: flex;    
 }
@@ -48,6 +44,7 @@
     margin-right: auto;
 }
 .card-container .frente .flexbox .box {
+    margin-top: 30px;
     font-size: 15px;
     color: #fff;
 }
