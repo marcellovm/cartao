@@ -38,13 +38,21 @@ function alterarNumero() {
     if (numero.value.length === 19) {
         numero.classList.add('is-valid');
     }
+    if (numero.value.substr(0, 1) === "4"){
+        card_bandeira.innerHTML = '<img src="img/visa.png" height="50px">';        
+    } else if (numero.value.substr(0, 1) === "5"){
+        card_bandeira.innerHTML = '<img src="img/master.png" height="50px">';
+    } else if (numero.value.substr(0, 1) == "6") {
+        card_bandeira.innerHTML = '<img src="img/elo.png" heigth="50px">';
+    }
+
     card_numero.innerHTML = numero.value;
 }
 function alterarTitular () {
     titular.classList.remove('is-invalid');
     if (titular.value.length === 30) {
         titular.classList.add('is-valid');
-    }
+    }    
     card_titular.innerHTML = titular.value;
 }
 function alterarCpf() {
@@ -77,6 +85,6 @@ function alterarCvv() {
     }
     if (cvv.value.length === 3) {
         cvv.classList.add('is-valid');
-    }
+    }    
     card_cvv.innerHTML = cvv.value;
 }

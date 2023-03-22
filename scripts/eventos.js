@@ -16,6 +16,7 @@ for (let m = 0; m <= 11; m++) {
     mes.innerHTML += "<option>" + meses[m] + "</option>";
 }
 for (let a = 2023; a <= 2043; a++) {
-    ano.innerHTML += `<option>${a}</option>`;
+    let value = a.toString().substr(2, 2);
+    ano.innerHTML += `<option value="${value}">${a}</option>`;
 }
 
