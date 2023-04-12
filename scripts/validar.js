@@ -88,3 +88,8 @@ function alterarCvv() {
     }    
     card_cvv.innerHTML = cvv.value;
 }
+
+function enviar() {
+    event.preventDefault();
+    alert('Enviado')
+}

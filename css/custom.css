@@ -14,7 +14,7 @@
     height: 100%;
     width: 100%;
     top: 0; left: 0;
-    background: linear-gradient(45deg, blueviolet, deeppink);
+    background: linear-gradient(to left, rgb(255, 217, 0), rgb(136, 131, 67));
     border-radius: 5px;
     backface-visibility: hidden;
     box-shadow: 0 15px 25px rgba(0, 0, 0,.2);
@@ -27,6 +27,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
+    color: whitesmoke;
 }
 .card-container .frente .image img {
     height: 50px;
@@ -53,7 +54,7 @@
     top:0; left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(45deg, blueviolet, deeppink);
+    background: linear-gradient(to left, rgb(255, 217, 0), rgb(136, 131, 67));
     border-radius: 5px;
     padding: 20px 0;
     text-align: right;
