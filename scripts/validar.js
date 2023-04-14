@@ -50,7 +50,7 @@ function alterarNumero() {
 }
 function alterarTitular () {
     titular.classList.remove('is-invalid');
-    if (titular.value.length === 30) {
+    if (titular.value.length === 23) {
         titular.classList.add('is-valid');
     }    
     card_titular.innerHTML = titular.value;
@@ -89,7 +89,7 @@ function alterarCvv() {
     card_cvv.innerHTML = cvv.value;
 }
 
-function enviar() {
+function Enviar() {
     event.preventDefault();
     alert('Enviado')
 }
